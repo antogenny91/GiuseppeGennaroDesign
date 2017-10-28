@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1001819199223",
+    "firebase_url": "https://giuseppegennarodesign-573cc.firebaseio.com",
+    "project_id": "giuseppegennarodesign-573cc",
+    "storage_bucket": "giuseppegennarodesign-573cc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1001819199223:android:8c0633afcb376ce4",
+        "android_client_info": {
+          "package_name": "it.giuseppegennaro.giuseppegennarodesign.gennarogiuseppedesign"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1001819199223-e7rm9r1iol3f15mtk7nr92kia750e75p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "it.giuseppegennaro.giuseppegennarodesign.gennarogiuseppedesign",
+            "certificate_hash": "49fde1272f9a72a24befa0eebbac2d005d21ce44"
+          }
+        },
+        {
+          "client_id": "1001819199223-50ct9lg2h7bgu0u68r8qt0on4qq544d3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4FghkfyLQ5B0Dh-VNvTPruFYyxLk_bf0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1001819199223-50ct9lg2h7bgu0u68r8qt0on4qq544d3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
