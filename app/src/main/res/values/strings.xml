@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">GennaroGiuseppeDesign</string>
+    <string name="app_name">Gennaro Giuseppe Design</string>
+    <string name="catalogue">Scopri il nostro catalogo</string>
+    <string name="website">Visita il nostro sito</string>
+    <string name="fbpage">Seguici su Facebook</string>
+    <string name="choose_category">Seleziona una categoria</string>
 </resources>

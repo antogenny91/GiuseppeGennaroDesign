@@ -1,8 +1,51 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="it.giuseppegennaro.giuseppegennarodesign.gennarogiuseppedesign.MainActivity">
-</android.support.constraint.ConstraintLayout>
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/catalogue_ll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clickable="true">
+        <TextView
+            android:id="@+id/catalogue_tv"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:text="@string/catalogue"
+            android:background="@drawable/back" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/website_ll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clickable="true">
+        <TextView
+            android:id="@+id/website_tv"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:text="@string/website"
+            android:background="@drawable/back"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fbpage_ll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clickable="true">
+        <TextView
+            android:id="@+id/fbpage_tv"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:text="@string/fbpage"
+            android:background="@drawable/back"/>
+    </LinearLayout>
+</LinearLayout>
