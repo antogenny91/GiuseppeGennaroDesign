@@ -1,4 +1,4 @@
-package it.giuseppegennaro.giuseppegennarodesign.gennarogiuseppedesign;
+package it.giuseppegennaro.giuseppegennarodesign.giuseppegennarodesign;
 
 import org.junit.Test;
 

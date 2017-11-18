@@ -1,4 +1,4 @@
-package it.giuseppegennaro.giuseppegennarodesign.gennarogiuseppedesign;
+package it.giuseppegennaro.giuseppegennarodesign.giuseppegennarodesign;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("it.giuseppegennaro.giuseppegennarodesign.gennarogiuseppedesign", appContext.getPackageName());
+        assertEquals("it.giuseppegennaro.giuseppegennarodesign.giuseppegennarodesign", appContext.getPackageName());
     }
 }
