@@ -10,6 +10,9 @@ public class CatalogueCategory {
     private int id;
     private String name;
 
+    public CatalogueCategory() {
+    }
+
     public CatalogueCategory(int id, String name) {
         this.id = id;
         this.name = name;

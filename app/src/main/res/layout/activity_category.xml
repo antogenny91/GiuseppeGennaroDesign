@@ -21,5 +21,4 @@
     android:text="@string/category_intent_test"
     android:background="@drawable/back" />
 
-
 </LinearLayout>

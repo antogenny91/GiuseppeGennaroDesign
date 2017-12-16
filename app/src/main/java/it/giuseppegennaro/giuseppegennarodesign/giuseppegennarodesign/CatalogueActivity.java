@@ -7,12 +7,15 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class CatalogueActivity extends Activity{
@@ -24,24 +27,33 @@ public class CatalogueActivity extends Activity{
         super.onCreate(savedInstanceState);
         context = this;
         setContentView(R.layout.activity_catalogue);
-        ListView categoryListView = (ListView)findViewById(R.id.catalogue_list);
 
-        //List of cataloguecategory
-        List <CatalogueCategory> category_list = new LinkedList<CatalogueCategory>();
+        //Test read database
+        final FirebaseDatabase database = FirebaseDatabase.getInstance();
+        final DatabaseReference myRef = database.getReference("categories");
+        final List <CatalogueCategory> category_list = new ArrayList<>();
+        final ListView categoryListView = findViewById(R.id.catalogue_list);
 
-        //simulate activity getting data from db
-        //table category - id, name
-        //for(int i= 0; i<125; i++) {
-        //    category_list.add(new CatalogueCategory(i,"Categoria numero " + i ));
-        //}
-        category_list.add(new CatalogueCategory(0,"Tendaggi"));
-        category_list.add(new CatalogueCategory(1,"Divani e poltrone"));
-        category_list.add(new CatalogueCategory(2,"Tappeti e moquoettes"));
-        category_list.add(new CatalogueCategory(3,"Illuminazione" ));
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot snapshot) {
+                Log.v("USAGE","Inside onDataChange method" );
+                for (DataSnapshot noteSnapshot: snapshot.getChildren()){
+                    Log.v("CATEGORY","Get children " + noteSnapshot.toString() );
+                    CatalogueCategory category = noteSnapshot.getValue(CatalogueCategory.class);
+                    Log.v("CATEGORY","Create CatalogueCategory object name: " + category.getName() );
+                    category_list.add(category);
+                }
+                Log.v("LIST","Number of items in category_list " + category_list.size() );
 
-        //View adapter by CategoryAdapter
-        CategoryAdapter categoryAdapter = new CategoryAdapter(this, R.layout.category_item, category_list);
-        categoryListView.setAdapter(categoryAdapter);
+                //Create categoryAdapter and populate categotyListView
+                CategoryAdapter categoryAdapter = new CategoryAdapter(context, R.layout.category_item, category_list);
+                categoryListView.setAdapter(categoryAdapter);
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+            }
+        });
 
         categoryListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
